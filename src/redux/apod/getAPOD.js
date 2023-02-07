@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const apodURL = 'https://api.nasa.gov/planetary/apod?count=10&api_key=sUf2Q8mvZnRhjV6Ch5y5m4d8E3MCWdtSSk0IbBTS';
-const initialState = {
+export const initialState = {
   pictures: [],
   status: null,
 };
