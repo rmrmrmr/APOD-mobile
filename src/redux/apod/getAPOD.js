@@ -25,9 +25,9 @@ const pictures = createSlice({
   initialState,
   reducers: {
     searchPic: (state, action) => {
-      const searchTerm = action.payload;
+      const searchTerm = action.payload.toLowerCase();
       const st = JSON.parse(JSON.stringify(state.pictures));
-      const filtSearch = st.filter((image) => image.title.match(searchTerm));
+      const filtSearch = st.filter((image) => image.title.toLowerCase().match(searchTerm));
       // eslint-disable-next-line no-param-reassign
       state.filt = filtSearch;
     },
