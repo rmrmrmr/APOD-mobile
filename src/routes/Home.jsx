@@ -12,7 +12,7 @@ const Home = () => {
       <Searchbar />
       <Logo />
       <div className="w-full bg-blue-500 text-white px-2 py-2 text-sm flex items-center">PICTURES OF THE DAY</div>
-      <div className="flex h-auto w-full flex-wrap gap-0">
+      <div className="flex h-auto w-full flex-wrap gap-0 justify-center">
         {
           filt.length ? filt.map((pics, index) => (
             <Picture
@@ -22,7 +22,7 @@ const Home = () => {
               ind={index}
               key={pics.url}
             />
-          )) : <h2 className="bg-blue-500 h-screen w-full text-white font-bold text-center pt-10">Loading filt...</h2>
+          )) : <h2 className="bg-blue-500 h-screen w-full text-white font-bold text-center pt-10">No Image Found</h2>
         }
       </div>
     </div>
