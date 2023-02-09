@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const apodURL = 'https://api.nasa.gov/planetary/apod?start_date=2021-01-15&end_date=2021-01-24&api_key=sUf2Q8mvZnRhjV6Ch5y5m4d8E3MCWdtSSk0IbBTS';
 export const initialState = {
@@ -16,8 +15,10 @@ export const getList = createAsyncThunk(
   'apod/getList',
   async () => {
     try {
-      const response = await (await axios.get(apodURL)).data;
-      return response;
+      // const response = await (await axios.get(apodURL)).data;
+      const response = await fetch(apodURL);
+      const data = await response.json();
+      return data;
     } catch (error) {
       return error;
     }
