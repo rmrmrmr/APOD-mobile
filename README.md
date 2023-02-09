@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [APOD Mobile] <a name="about-project"></a>
+# 📖 APOD Mobile <a name="about-project"></a>
 
 > The APOD Mobile is a webpage that
 - Is connected to the [https://api.nasa.gov/](APOD API). 
@@ -51,9 +51,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[See a List of APOD pictures]**
-- **[Search for pictures by name]**
-- **[Access a details page for each picture]**
+- **See a List of APOD pictures**
+- **Search for pictures by name**
+- **Access a details page for each picture**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
