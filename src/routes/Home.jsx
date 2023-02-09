@@ -6,7 +6,6 @@ import Picture from '../components/Picture';
 
 const Home = () => {
   const { filt } = useSelector((state) => state.apod);
-
   return (
     <div className="h-screen font-lato bg-blue-500">
       <Searchbar />
@@ -20,7 +19,7 @@ const Home = () => {
               date={pics.date}
               pic={pics.hdurl}
               ind={index}
-              key={pics.url}
+              key={pics.date}
             />
           )) : (
             <div className="bg-blue-500 h-auto w-full text-white font-bold text-center pt-10 flex flex-col items-center gap-0">
