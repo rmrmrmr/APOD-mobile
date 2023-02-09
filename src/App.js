@@ -3,16 +3,18 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+// import {Switch} from 'reac'\
 import Home from './routes/Home';
+import Details from './routes/Details';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={(<Home />)}
-        />
+        <Route path="/" element={(<Home />)} />
+        <Route>
+          <Route path="/details/:title" element={(<Details />)} />
+        </Route>
       </Routes>
     </Router>
   );
