@@ -1,16 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchPic } from '../redux/apod/getAPOD';
 import Searchbar from '../components/Searchbar';
 import Logo from '../components/Logo';
 import Picture from '../components/Picture';
 
 const Home = () => {
   const { filt } = useSelector((state) => state.apod);
+  const dispatch = useDispatch();
+
   return (
-    <div className="h-screen font-lato bg-blue-500">
+    <div className="min-h-screen h-full font-lato bg-blue-500 max-w-md">
       <Searchbar />
       <Logo />
-      <div className="w-full bg-blue-500 text-white px-2 py-2 text-sm flex items-center">PICTURES OF THE DAY</div>
+      <input onChange={(e) => dispatch(searchPic(e.target.value))} type="text" name="search" id="search" className="bg-blue-500 rounded-2xl text-white placeholder:text-slate-200 px-2 py-3 border-2 border-blue-500 focus:border-2 focus:border-blue-700 focus:outline-none w-[90%] ml-1" placeholder="Search by name" />
       <div className="flex h-auto w-full flex-wrap gap-0 justify-center">
         {
           filt.length ? filt.map((pics, index) => (

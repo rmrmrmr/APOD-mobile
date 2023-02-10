@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="bg-blue-400 flex items-center justify-center h-2/6"
+  className="bg-blue-400 flex items-center justify-center h-56"
 >
   <img
     alt="img not found"
