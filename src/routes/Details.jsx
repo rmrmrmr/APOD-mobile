@@ -28,7 +28,7 @@ const Details = () => {
           </svg>
         </div>
       </div>
-      <div className="px-5 py-3 h-full">
+      <div className="px-5 py-3 h-full min-h-screen">
         <img src={searched.hdurl} alt="Img Not Found" className="rounded-lg h-1/2 max-h-60 min-w-full" />
         <div className="flex justify-between text-white mt-2">
           <h1 className="text-xl max-w-[80%]">{searched.title}</h1>
